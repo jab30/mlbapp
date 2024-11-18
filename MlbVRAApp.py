@@ -1,3 +1,14 @@
+import subprocess
+import sys
+
+# Check if matplotlib is installed, and if not, install it
+try:
+    import matplotlib.pyplot as plt
+except ImportError:
+    subprocess.check_call([sys.executable, "-m", "pip", "install", "matplotlib"])
+    import matplotlib.pyplot as plt
+
+
 import streamlit as st
 import numpy as np
 import matplotlib.pyplot as plt
